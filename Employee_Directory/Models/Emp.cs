@@ -16,6 +16,7 @@ namespace Employee_Directory.Models
             public string Emp_ID { get; set; }
             
         }
+
         public class Details_Paramss
 
         {

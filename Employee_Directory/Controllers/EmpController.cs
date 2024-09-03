@@ -95,6 +95,7 @@ namespace Employee_Directory.Controllers
                     ModelState.Clear();
 
                     return Json(empList, JsonRequestBehavior.AllowGet);
+
                 }
             }
             catch (Exception ex)

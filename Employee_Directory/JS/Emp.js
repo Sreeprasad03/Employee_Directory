@@ -15,6 +15,7 @@ function FetchEmpDetails() {
         Emp_ID: Emp_ID
     };
 
+
     $.ajax({
         cache: false,
         type: "POST",
