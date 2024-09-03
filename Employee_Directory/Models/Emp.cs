@@ -16,7 +16,12 @@ namespace Employee_Directory.Models
             public string Emp_ID { get; set; }
             
         }
+        public class Details_Paramss
 
+        {
+            public string Location { get; set; }
+
+        }
         public class Status1
       
         {
@@ -154,6 +159,55 @@ namespace Employee_Directory.Models
                             Name = reader["Name"].ToString(),
                             ID = reader["ID"].ToString(),
 
+                        };
+
+                        resultList.Add(result);
+                    }
+                }
+                con.Close();
+            }
+
+            return resultList;
+        }
+
+        public List<Status1> Emp_DetailsCall(Details_Paramss U)
+        {
+            List<Status1> resultList = new List<Status1>();
+
+            connection();
+            using (SqlCommand Cmd = new SqlCommand("Fill_LocTion", con))
+            {
+                Cmd.CommandType = CommandType.StoredProcedure;
+                Cmd.Parameters.AddWithValue("@Location", U.Location);
+                con.Open();
+                using (SqlDataReader reader = Cmd.ExecuteReader())
+                {
+
+                    while (reader.HasRows && reader.Read())
+                    {
+                        Status1 result = new Status1
+                        {
+                            Emp_ID = reader["Emp_ID"].ToString(),
+                            Emp_Name = reader["Emp_Name"].ToString(),
+                            Emp_Address = reader["Emp_Address"].ToString(),
+                            Emp_Desg = reader["Emp_Desg"].ToString(),
+                            Emp_totalExp = reader["Emp_totalExp"].ToString(),
+                            Emp_InHouse_Exp = reader["Emp_InHouse_Exp"].ToString(),
+                            Emp_Team = reader["Emp_Team"].ToString(),
+                            Emp_Rp_Manager = reader["Emp_Rp_Manager"].ToString(),
+                            Emp_Days_Present = reader["Emp_Days_Present"].ToString(),
+                            Emp_Casucal = reader["Emp_Casucal"].ToString(),
+                            Emp_Silck = reader["Emp_Silck"].ToString(),
+                            Emp_Date = reader["Emp_Date"].ToString(),
+                            Emp_Leave_Type = reader["Emp_Leave_Type"].ToString(),
+                            Emp_Count = reader["Emp_Count"].ToString(),
+                            Emp_Status = reader["Emp_Status"].ToString(),
+                            Emp_Probation = reader["Emp_Probation"].ToString(),
+                            Emp_Message = reader["Emp_Message"].ToString(),
+                            Emp_Acessable = reader["Emp_Acessable"].ToString(),
+                            Emp_Payable = reader["Emp_Payable"].ToString(),
+                            Emp_Dep = reader["Emp_Dep"].ToString(),
+                            Emp_ImageURL = reader["Emp_ImageURL"].ToString()
                         };
 
                         resultList.Add(result);

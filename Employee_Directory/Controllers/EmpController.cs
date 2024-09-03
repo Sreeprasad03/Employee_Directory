@@ -82,5 +82,27 @@ namespace Employee_Directory.Controllers
 
             return Json(null, JsonRequestBehavior.AllowGet); // Return something in case of an error
         }
+
+        public JsonResult Emp_Details(Details_Paramss U)
+        {
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    Emp dbhandle = new Emp();
+                    List<Emp.Status1> empList = dbhandle.Emp_DetailsCall(U); // Expecting List<Status1>
+
+                    ModelState.Clear();
+
+                    return Json(empList, JsonRequestBehavior.AllowGet);
+                }
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (ex) if needed
+            }
+
+            return Json(null, JsonRequestBehavior.AllowGet); // Return something in case of an error
+        }
     }
 }

@@ -245,3 +245,104 @@ body {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.5);
 }
+#employeeModal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+.modal-body {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.employee-image {
+    flex: 0 0 200px;
+    margin-right: 20px;
+}
+
+    .employee-image img {
+        width: 100%;
+        border-radius: 4px;
+    }
+
+.employee-details {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.detail-group {
+    flex: 0 0 calc(50% - 10px);
+    margin-right: 10px;
+    margin-bottom: 15px;
+}
+
+    .detail-group.full-width {
+        flex: 0 0 100%;
+    }
+
+    .detail-group p {
+        margin: 5px 0;
+    }
+
+@media (max-width: 768px) {
+    .modal-content {
+        width: 95%;
+    }
+
+    .employee-image {
+        flex: 0 0 100%;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+        .employee-image img {
+            max-width: 200px;
+            margin: 0 auto;
+            display: block;
+        }
+
+    .detail-group {
+        flex: 0 0 100%;
+    }
+}
