@@ -1,0 +1,247 @@
+﻿/* General styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.section {
+    padding: 2rem 0;
+}
+
+.card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+}
+
+.card-header {
+    background-color: #007bff;
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.card-header-text {
+    margin: 0;
+    font-size: 1.25rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Form styles */
+.input-field {
+    margin-bottom: 1rem;
+}
+
+    .input-field input[type="text"],
+    .input-field select {
+        width: 20%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: border-color 0.3s ease;
+        PADDING-LEFT: 30PX;
+    }
+
+        .input-field input[type="text"]:focus,
+        .input-field select:focus {
+            outline: none;
+            border-color: #007bff;
+        }
+
+.btn-search {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .btn-search:hover {
+        background-color: #3086e2;
+    }
+
+/* Employee grid styles */
+#Authorisation {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 1rem;
+    margin-top: 1.5rem;
+}
+
+    #Authorisation legend {
+        font-weight: bold;
+        padding: 0 0.5rem;
+    }
+
+.directory-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.emp-detail {
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    padding: 1rem;
+    transition: box-shadow 0.3s ease;
+}
+
+    .emp-detail:hover {
+        background-color: #e6f2ff;
+    }
+
+    .emp-detail h4 {
+        margin: 0 0 0.5rem 0;
+        font-size: 1.1rem;
+        color: #007bff;
+    }
+
+    .emp-detail p {
+        margin: 0 0 0.25rem 0;
+        font-size: 0.9rem;
+    }
+
+.selected-row {
+    background-color: #e6f2ff#e6f2ff;
+}
+
+/* Responsive adjustments */
+/*@media (max-width: 768px) {
+    .directory-grid {
+        grid-template-columns: 1fr;
+    }*/
+
+    /*.col-md-2.search_btn {
+        margin-top: 1rem;
+    }
+}*/
+.employee-image {
+    max-width: 100%; /* Ensure image fits within its container */
+    height: auto; /* Maintain aspect ratio */
+}
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    width: 700px;
+    max-width: 90%;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 80px;
+    height: 80px;
+    margin-right: 20px;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.user-info p {
+    margin: 5px 0;
+}
+
+.team {
+    color: #00bfff;
+    font-weight: bold;
+}
+
+.manager {
+    color: #ff6347;
+    font-weight: bold;
+}
+
+
+
+.attendance, .leave-applications, .notes, .probation, .salary {
+    margin-bottom: 20px;
+}
+
+.leave-type {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.leave-applications table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.leave-applications th, .leave-applications td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.probation-bar {
+    width: 30%;
+    height: 10px;
+    background-color: #6a1b9a;
+    border-radius: 5px;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.unlock-btn, .view-profile-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #007bff;
+    cursor: pointer;
+}
+
+.view-profile-btn {
+    background-color: #28a745;
+}
+.modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
